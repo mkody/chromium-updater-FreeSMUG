@@ -1,5 +1,7 @@
 Chromium Upgrader for Mac OS X
 ==============================
+(using FreeSMUG builds)
+-----------------------
 
 [Chromium](http://www.chromium.org/) is a free open source Web browser based on [Webkit](http://webkit.org/) and represents a credible alternative to [Chrome](http://www.google.com/chrome), the Google Web browser.
 
@@ -11,7 +13,7 @@ Installation
 I suggest installation to be done in `/usr/local` directory.
 
     $ cd /usr/local
-    $ git clone git://github.com/n1k0/chromium-updater.git getchromium
+    $ git clone git://github.com/mkody/chromium-updater-FreeSMUG.git getchromium
     $ ln -s /usr/local/getchromium/getchromium.sh /usr/local/bin/getchromium
 
 Last, don't forget to add the execution bit to the script:
@@ -30,6 +32,10 @@ Run it that way:
 Notes
 -----
 
-**Warning**: quick and dirty homemade script. At least, works on my box =)
+This is a fork of [n1k0/chromium-updater](https://github.com/n1k0/chromium-updater) to update to the latest **FreeSMUG Chromium 64bit build** from command line.
 
-The script is intented and only intended to be used on Mac OS X Snow Leopard (10.6.x) but might be ported to other \*n*x OSes. Feel free to send any patch or pull request if you want to contribute enhancements.
+I was using [n1k0/chromium-updater](https://github.com/n1k0/chromium-updater) before, but I wanted to use a more "stable" version and with PepperFlash integrated.
+
+I'm using FreeSMUG Sourceforge RSS to get the latest version from them, mounting the archive and copying everything in place. You can sure change the destination path from the script.
+
+The script is intended and only intended to be used on Mac OS X Snow Leopard (10.6.x) and up. Feel free to send any patch or pull request if you want to contribute enhancements.
