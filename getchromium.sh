@@ -12,7 +12,7 @@ die() {
 W="$(whoami)"
 TMP="${TMPDIR-/tmp}"
 PROC="$(ps aux | grep -i 'Chromium' | grep -iv 'grep' | grep -iv "$0" | wc -l | awk '{print $1}')" || die 'Unable to count running Chromium processes'
-DOWNLOAD_URL="$(curl 'http://sourceforge.net/projects/osxportableapps/rss?path=/Chromium' 2> /dev/null | grep 'guid' | head -1 | sed -e 's/      <guid>\(.*\)<\/guid>/\1/')" || die 'Unable to fetch download URL'
+DOWNLOAD_URL="$(curl 'https://sourceforge.net/projects/osxportableapps/rss?path=/Chromium' 2> /dev/null | grep 'guid' | head -1 | sed -e 's/      <guid>\(.*\)<\/guid>/\1/')" || die 'Unable to fetch download URL'
 INSTALL_DIR='/Applications'
 MOUNTPOINT='/Volumes/Chromium'
 
